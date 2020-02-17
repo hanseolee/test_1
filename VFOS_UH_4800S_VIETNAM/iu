@@ -1,0 +1,17 @@
+#!/bin/sh
+#make clean
+#make 
+IP="121.170.193.183"
+#IP="192.168.182.1"
+USER=1
+PW=1
+FILENAME1=vfos2_4800s
+
+ftp -n << EOF
+open $IP 
+user $USER $PW 
+prompt off 
+bi 
+put ${FILENAME1}
+bye 
+exit 0

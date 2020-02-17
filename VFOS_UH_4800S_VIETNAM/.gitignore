@@ -1,0 +1,9 @@
+*.o
+vfos2_4800s
+DIFF/
+cscope.files
+cscope.out
+make_cscope.sh
+*.bak
+script_git_add.sh
+tags

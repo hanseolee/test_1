@@ -1,0 +1,17 @@
+#!/bin/sh
+#IP="121.170.193.180"
+#USER=a
+#PW=a
+#FILENAME1=vfos2_4800s
+
+#ftp -n << EOF
+#open $IP 
+#user $USER $PW 
+#prompt off 
+#bi 
+#put ${FILENAME1}
+#bye 
+#exit 0
+
+
+(make clean; make -j20 2>&1 | grep 'error\:') || (cp vfos2_4800s ~/nfs/ && sync && make && date)
